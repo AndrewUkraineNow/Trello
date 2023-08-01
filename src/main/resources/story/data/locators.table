@@ -22,3 +22,14 @@
 |close-button         |By.xpath(//a[@class='js-close-board'])                                                            |
 |close-board-menu     |By.xpath(//input[@value='Close'])                                                                 |
 |automation-button    |By.xpath(//button[@aria-label='Automation'])                                                      |
+|rules-button         |By.xpath(//span[text()='Rules'])                                                                  |
+|rules-iframe         |By.xpath(//iframe[@class='butler-iframe'])                                                        |
+|create-automation    |By.xpath(//div[@class='rule']//div[text()='Create automation'])                                   |
+|add-trigger-button   |By.xpath(//div[text()='+ Add Trigger'])                                                           |
+|output-move-trigger  |By.xpath(//div[@class='trigger-output-text' and text()='when a card is added to the board by me'])|
+|list-name-field-to-do|By.xpath((//input[@name='list-name'])[3])                                                         |
+|select-trigger-button|By.xpath((//button[contains(@class,'select-trigger-btn')])[1])                                    |
+|select-action-button |By.xpath((//div[contains(@class,'select-action-btn')])[1])                                        |
+|action-move-trigger  |By.xpath(//div[@class='action-output-text' and text()='move the card to the top of list'])        |
+|save-rules-button    |By.xpath(//div[text()='Save'])                                                                    |
+|close-auto-button    |By.xpath(//a[@href='#close'])                                                                     |

@@ -21,14 +21,7 @@ When I execute steps while counter is less than or equal to `10` with increment 
 
 
 Scenario: Verify that user can delete board with API
-Given I initialize SCENARIO variable `board_name` with value `#{replaceAllByRegExp(^(.*[\\\/]), , #{extractPathFromUrl(${current-page-url})})}`
-Given I initialize SCENARIO variable `url` with value `${api_url}/1/members/me/boards?fields=id,name&name=${board_name}&key=${key}&token=${token}`
-When I execute HTTP GET request for resource with URL `${url}`
-Then `${response-code}` is equal to `200`
-When I save JSON element from context by JSON path `[0].id` to SCENARIO variable `id_board`
-Given I initialize SCENARIO variable `url2` with value `${api_url}/1/boards/#{removeWrappingDoubleQuotes(${id_board})}?key=${key}&token=${token}`
-When I execute HTTP DELETE request for resource with URL `${url2}`
-Then `${response-code}` is equal to `200`
+When I delete current board by API
 
 
 Scenario: Verify that user can log out of trello on UI
